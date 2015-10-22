@@ -1,5 +1,5 @@
 {
-    "name": "fadion/bouncy",
+    "name": "adeb6600/bouncy",
     "description": "Map Elasticsearch results to Eloquent models",
     "license": "MIT",
     "keywords": ["laravel", "elasticsearch", "eloquent"],
