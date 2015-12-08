@@ -28,16 +28,16 @@ class ElasticCollection extends Collection {
      * @param int $perPage
      * @return mixed
      */
-    public function paginate($perPage = 15)
+  public function paginate($perPage = 15)
     {
         $paginator = new Paginator($this->items, $perPage);
 
         $start = ($paginator->currentPage() - 1) * $perPage;
         $sliced = array_slice($this->items, $start, $perPage);
 
-        return new Paginator($sliced, $perPage);
+    //    return new Paginator($sliced, $perPage);
+         return  new LengthAwarePaginator($sliced,$this->total(),$perPage);
     }
-
     /**
      * Limits the number of results.
      *
